@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Ticket</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+  <section class="form-section">
+    <h1>🎟️ Book Your Ticket</h1>
+
+    <form action="/confirmation" method="POST">
+
+
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="event">Select Event:</label><br />
+      <select id="event" name="event" required>
+        <option value="">-- Choose an Event --</option>
+        <option value="concert">Judika Live In Johor</option>
+        <option value="movie">Imsoniacks Live In Kulai</option>
+        <option value="theatre">Siti Nurhaliza 20 Years</option>
+      </select><br /><br />
+
+      <label for="tickets">Number of Tickets:</label><br />
+      <input type="number" id="tickets" name="tickets" min="1" max="10" required /><br /><br />
+
+      <button type="submit">Purchase Now</button>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2023 Hytix. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
